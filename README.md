@@ -73,4 +73,4 @@ The tag triggers `.github/workflows/publish.yml`, which runs all tests and publi
 
 ## License
 
-GPL-3.0
+MIT

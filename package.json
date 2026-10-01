@@ -11,7 +11,7 @@
     "screen",
     "riso"
   ],
-  "license": "GPL-3.0-only",
+  "license": "MIT",
   "author": "Nic Young",
   "repository": {
     "type": "git",
