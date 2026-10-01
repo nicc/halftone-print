@@ -1,0 +1,53 @@
+{
+  "name": "halftone-print",
+  "version": "0.1.0",
+  "description": "Turn any image into halftone dots on canvas \u2014 rotated screen, ink gain, jitter and noise for a printed look.",
+  "keywords": [
+    "halftone",
+    "canvas",
+    "print",
+    "dots",
+    "image",
+    "screen",
+    "riso"
+  ],
+  "license": "GPL-3.0-only",
+  "author": "Nic Young",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nicc/halftone-print.git"
+  },
+  "homepage": "https://github.com/nicc/halftone-print#readme",
+  "bugs": "https://github.com/nicc/halftone-print/issues",
+  "type": "module",
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "rm -rf dist && tsc -p tsconfig.build.json",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run --project unit",
+    "test:browser": "vitest run --project browser",
+    "test:all": "vitest run",
+    "prepublishOnly": "npm run typecheck && npm run test:all && npm run build"
+  },
+  "devDependencies": {
+    "@vitest/browser-playwright": "^5.0.3",
+    "playwright": "^1.63.0",
+    "typescript": "^7.0.2",
+    "vitest": "^5.0.3"
+  }
+}
